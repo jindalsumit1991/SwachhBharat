@@ -51,6 +51,7 @@ public class RegistrationController {
 		logger.info("Last Name: " + user.getLastname());
 		logger.info("Address: " + user.getAddress());
 		logger.info("Phone: " + user.getPhone());
+		logger.info("AuthLevel: " + user.getAuthlevel());
 		logger.info("OUT RegistrationController.addUser()");
 		return new ModelAndView("welcome", "firstname", user.getFirstname());
 	}

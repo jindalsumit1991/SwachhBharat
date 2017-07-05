@@ -11,6 +11,14 @@ public class User {
 	private String email;
 	private String address;
 	private int phone;
+	private int authlevel;
+	
+	public int getAuthlevel() {
+		return authlevel;
+	}
+	public void setAuthlevel(int authlevel) {
+		this.authlevel = authlevel;
+	}
 	public String getUsername() {
 		return username;
 	}

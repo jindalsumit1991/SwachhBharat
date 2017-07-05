@@ -34,10 +34,11 @@ public class UserDaoImpl implements UserDao {
 		logger.info("Last Name: " + user.getLastname());
 		logger.info("Address: " + user.getAddress());
 		logger.info("Phone: " + user.getPhone());
+		logger.info("AuthLevel: " + user.getAuthlevel());
 		
-		String sql = "insert into users values(?,?,?,?,?,?,?)";
+		String sql = "insert into users values(?,?,?,?,?,?,?,?)";
 		jdbcTemplate.update(sql, new Object[] { user.getUsername(), user.getPassword(), user.getFirstname(),
-				user.getLastname(), user.getEmail(), user.getAddress(), user.getPhone() });
+				user.getLastname(), user.getEmail(), user.getAddress(), user.getPhone(), user.getAuthlevel()});
 	}
 	public User validateUser(Login login) {
 		String sql = "select * from users where username='" + login.getUsername() + "' and password='" + login.getPassword()
@@ -56,6 +57,7 @@ class UserMapper implements RowMapper<User> {
 		user.setEmail(rs.getString("email"));
 		user.setAddress(rs.getString("address"));
 		user.setPhone(rs.getInt("phone"));
+		user.setAuthlevel(rs.getInt("authlevel"));
 		return user;
 	}
 }

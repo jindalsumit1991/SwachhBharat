@@ -44,6 +44,10 @@
 				<td><form:input path="phone" name="phone" id="phone" /></td>
 			</tr>
 			<tr>
+				<td><form:label path="authlevel">AuthLevel</form:label></td>
+				<td><form:input path="authlevel" name="authlevel" id="authlevel" /></td>
+			</tr>
+			<tr>
 				<td></td>
 				<td><form:button id="register" name="register">Register</form:button>
 				</td>

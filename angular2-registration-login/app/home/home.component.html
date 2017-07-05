@@ -1,0 +1,14 @@
+﻿<div class="col-md-6 col-md-offset-3">
+    <h2>Welcome {{ currentUser.userData.firstname }} {{ currentUser.userData.lastname }}!</h2>
+    <p>You're logged In as {{ authLevel }}</p>
+    <!--
+    <h3>All registered users:</h3>
+    <ul>
+        <li *ngFor="let user of users">
+            {{user.userData.username}} ({{user.userData.firstname}} {{user.userData.lastname}})
+            - <a (click)="deleteUser(user.id)">Delete</a>
+        </li>
+    </ul>
+    -->
+    <p><a [routerLink]="['/login']">Logout</a></p>
+</div>
