@@ -46,34 +46,34 @@ export class LoginComponent implements OnInit {
                     switch(level) {
                         case AuthLevel.ADMIN:
                             console.log("Level 0 received - login component");
-                            //this.router.navigate(['/admin']);
+                            this.router.navigate(['/admin']);
                             break;
 
                         case AuthLevel.COUNTRY_HEAD:
-                            console.log("Level 1 received");
-                            //this.router.navigate(['/country']);
+                            console.log("Level 1 received, navigating to country-home");
+                            this.router.navigate(['/country-head']);
                             break;
 
                         case AuthLevel.STATE_HEAD:
                             console.log("Level 2 received");
-                            //this.router.navigate(['/state']);
+                            this.router.navigate(['/state-head']);
                             break;
 
                         case AuthLevel.DISTRICT_HEAD:
                             console.log("Level 3 received");
-                            //this.router.navigate(['/district']);
+                            this.router.navigate(['/district-head']);
                             break;
 
                         case AuthLevel.CITY_HEAD:
                             console.log("Level 4 received");
-                            //this.router.navigate(['/city']);
+                            this.router.navigate(['/city-head']);
                             break;
 
                         default:
                             console.log("Invalid Level received");
                             this.router.navigate(['/']);
+                            break;
                     }
-                    this.router.navigate(['/']);
                 },
                 error => {
                     this.alertService.error(error);
