@@ -16,7 +16,10 @@ export class UserService {
     }
 
     create(user: User) {
-        return this.http.post('/api/users', user, this.jwt()).map((response: Response) => response.json());
+        let url = 'http://localhost:8080/registerUser';
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+        return this.http.post(url, user, options).map((response: Response) => response.json());
     }
 
     update(user: User) {
