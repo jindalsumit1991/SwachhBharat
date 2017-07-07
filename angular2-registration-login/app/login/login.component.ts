@@ -41,32 +41,39 @@ export class LoginComponent implements OnInit {
             .subscribe(
                 data => {
                     this.authlevel = data.userData.authlevel;
-
+                    this.router.navigate(['/']);
+                    /*
                     let level = parseInt(this.authlevel);
                     switch(level) {
                         case AuthLevel.ADMIN:
                             console.log("Level 0 received - login component");
-                            this.router.navigate(['/admin']);
+                            //this.router.navigate(['/admin']);
+                            this.router.navigate(['/']);
+                            //window.location.href='http://52.42.225.35/SwatchBharat/india.html';
                             break;
 
                         case AuthLevel.COUNTRY_HEAD:
                             console.log("Level 1 received, navigating to country-home");
-                            this.router.navigate(['/country-head']);
+                            this.router.navigate(['/']);
+                            //window.location.href='http://52.42.225.35/SwatchBharat/india.html';
                             break;
 
                         case AuthLevel.STATE_HEAD:
                             console.log("Level 2 received");
-                            this.router.navigate(['/state-head']);
+                            //this.router.navigate(['/state-head']);
+                            //window.location.href='http://52.42.225.35/SwatchBharat/state.html?stateId=IN-KA&stateName=Karnataka';
                             break;
 
                         case AuthLevel.DISTRICT_HEAD:
                             console.log("Level 3 received");
-                            this.router.navigate(['/district-head']);
+                            //this.router.navigate(['/district-head']);
+                            //window.location.href='http://52.42.225.35/SwatchBharat/districts.html?stateId=IN-KA&stateName=Karnataka';
                             break;
 
                         case AuthLevel.CITY_HEAD:
                             console.log("Level 4 received");
-                            this.router.navigate(['/city-head']);
+                            //this.router.navigate(['/city-head']);
+                            //window.location.href='http://52.42.225.35/SwatchBharat/cities.html?stateName=Karnataka&districtName=Bengaluru%20Urban';
                             break;
 
                         default:
@@ -74,6 +81,8 @@ export class LoginComponent implements OnInit {
                             this.router.navigate(['/']);
                             break;
                     }
+                    this.router.navigate(['/']);
+                    */
                 },
                 error => {
                     this.alertService.error(error);

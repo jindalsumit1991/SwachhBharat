@@ -22,6 +22,7 @@ import { StateHomeComponent } from "./home/state/state.home.component";
 import { DistrictHomeComponent } from "./home/district/district.home.component";
 import { CityHomeComponent } from "./home/city/city.home.component";
 import { AdminHomeComponent } from "./home/admin/admin.home.component";
+import { SafePipe } from "./safe.pipe";
 
 @NgModule({
     imports: [
@@ -41,6 +42,7 @@ import { AdminHomeComponent } from "./home/admin/admin.home.component";
         DistrictHomeComponent,
         CityHomeComponent,
         AdminHomeComponent,
+        SafePipe,
     ],
     providers: [
         AuthGuard,
