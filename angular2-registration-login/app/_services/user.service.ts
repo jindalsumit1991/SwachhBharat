@@ -16,7 +16,7 @@ export class UserService {
     }
 
     create(user: User) {
-        let url = 'http://localhost:8080/registerUser';
+        let url = 'http://localhost:8090/registerUser';
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         return this.http.post(url, user, options).map((response: Response) => response.json());
